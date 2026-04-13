@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Trade Catalog 2026 — Onam Agarbathi Pvt. Ltd.</title>
+  <meta name="description" content="Download or view the official Onam Agarbathi General Trade Catalog 2026. 30 premium incense fragrances — Flagship, Devotional, Aromatherapy, Multi-Faith, Sacred Resin and Golden Jubilee collections." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .catalog-page {
+      padding: 60px 2rem 80px;
+    }
+    .catalog-hero-bar {
+      background: linear-gradient(135deg, var(--dark-brown), #4A2010);
+      color: var(--ivory);
+      text-align: center;
+      padding: 56px 2rem 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .catalog-hero-bar::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8A45A' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .catalog-hero-bar h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: var(--ivory);
+      margin-bottom: 0.5rem;
+    }
+    .catalog-hero-bar h1 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .catalog-hero-bar p {
+      font-size: 1rem;
+      color: rgba(251,245,230,0.75);
+      margin-bottom: 0.5rem;
+    }
+    .catalog-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .breadcrumb-bar {
+      font-size: 0.85rem;
+      color: rgba(251,245,230,0.5);
+      margin-top: 1.2rem;
+    }
+    .breadcrumb-bar a { color: var(--gold); text-decoration: none; }
+
+    /* Download & action strip */
+    .catalog-actions {
+      background: var(--cream);
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      padding: 20px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 900px;
+      margin: 40px auto 32px;
+    }
+    .catalog-actions-info {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+    }
+    .catalog-actions-info strong {
+      color: var(--text-dark);
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+    .catalog-btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--dark-brown);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      padding: 12px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-download:hover {
+      background: var(--dark-gold);
+      transform: translateY(-1px);
+    }
+    .btn-outline-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid var(--border-gold);
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      padding: 12px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-outline-dark:hover {
+      background: rgba(200, 164, 90, 0.12);
+    }
+
+    /* PDF Viewer */
+    .pdf-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(44, 24, 16, 0.12);
+    }
+    .pdf-embed {
+      display: block;
+      width: 100%;
+      height: 85vh;
+      min-height: 600px;
+      border: none;
+    }
+    .pdf-fallback {
+      display: none;
+      text-align: center;
+      padding: 60px 2rem;
+      background: var(--cream);
+    }
+    .pdf-fallback p {
+      margin-bottom: 20px;
+      color: var(--text-medium);
+    }
+
+    /* Catalog highlights grid */
+    .catalog-highlights {
+      max-width: 900px;
+      margin: 48px auto 16px;
+    }
+    .catalog-highlights h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .highlight-card {
+      background: var(--cream);
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .highlight-card .h-icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .highlight-card .h-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .highlight-card .h-lbl {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* Category list */
+    .catalog-categories {
+      max-width: 900px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .cat-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--cream);
+      border: 1px solid var(--border-gold);
+      border-radius: 6px;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: var(--text-dark);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .cat-item:hover {
+      background: rgba(200,164,90,0.12);
+      transform: translateX(3px);
+    }
+    .cat-item .cat-icon { font-size: 1.4rem; }
+    .cat-item .cat-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+    .cat-item .cat-count {
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 640px) {
+      .catalog-actions { flex-direction: column; align-items: flex-start; }
+      .pdf-embed { height: 60vh; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="marquee-bar">
+  <div class="marquee-inner">
+    <span class="marquee-item"><span class="dot">✦</span> Established 1922 · A Century of Sacred Fragrance</span>
+    <span class="marquee-item"><span class="dot">✦</span> Exported to 35+ Countries Worldwide</span>
+    <span class="marquee-item"><span class="dot">✦</span> 30 Unique Fragrances — Flagship · Devotional · Aromatherapy</span>
+    <span class="marquee-item"><span class="dot">✦</span> CSD &amp; Defence Canteen Supplier</span>
+    <span class="marquee-item"><span class="dot">✦</span> Central Government Contractor — 40+ Years</span>
+    <span class="marquee-item"><span class="dot">✦</span> Established 1922 · A Century of Sacred Fragrance</span>
+    <span class="marquee-item"><span class="dot">✦</span> Exported to 35+ Countries Worldwide</span>
+    <span class="marquee-item"><span class="dot">✦</span> 30 Unique Fragrances — Flagship · Devotional · Aromatherapy</span>
+    <span class="marquee-item"><span class="dot">✦</span> CSD &amp; Defence Canteen Supplier</span>
+    <span class="marquee-item"><span class="dot">✦</span> Central Government Contractor — 40+ Years</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo-icon">🪔</div>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">Onam Agarbathi</span>
+        <span class="nav-brand-tagline">Since 1922 · Bangalore</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="catalog.html" class="active">Catalog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- CATALOG HERO -->
+<div class="catalog-hero-bar">
+  <span class="catalog-eyebrow">General Trade Catalog · 2026</span>
+  <h1>Onam Agarbathi <em>Product Catalog</em></h1>
+  <p>30 premium incense fragrances — from the workshops of Bangalore to puja rooms across India and the world</p>
+  <div class="breadcrumb-bar"><a href="index.html">Home</a> › <span>Catalog</span></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="catalog-page">
+
+  <!-- Stats highlights -->
+  <div class="catalog-highlights">
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="h-icon">🏛️</div>
+        <div class="h-num">1922</div>
+        <div class="h-lbl">Founded</div>
+      </div>
+      <div class="highlight-card">
+        <div class="h-icon">📅</div>
+        <div class="h-num">100+</div>
+        <div class="h-lbl">Years Legacy</div>
+      </div>
+      <div class="highlight-card">
+        <div class="h-icon">🌸</div>
+        <div class="h-num">30+</div>
+        <div class="h-lbl">Fragrances</div>
+      </div>
+      <div class="highlight-card">
+        <div class="h-icon">🌍</div>
+        <div class="h-num">35+</div>
+        <div class="h-lbl">Countries Exported</div>
+      </div>
+      <div class="highlight-card">
+        <div class="h-icon">🏅</div>
+        <div class="h-num">3×</div>
+        <div class="h-lbl">Award-Winning Packaging</div>
+      </div>
+      <div class="highlight-card">
+        <div class="h-icon">🪖</div>
+        <div class="h-num">Pan India</div>
+        <div class="h-lbl">CSD Supply</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download action bar -->
+  <div class="catalog-actions">
+    <div class="catalog-actions-info">
+      <strong>Onam Agarbathi — General Trade Catalog 2026</strong>
+      Full product catalog with all 30 fragrances, pack details, and trade information.
+    </div>
+    <div class="catalog-btn-group">
+      <a href="Onam-Agarbathi-Catalog-2026.pdf" download="Onam-Agarbathi-Catalog-2026.pdf" class="btn-download">
+        ⬇ Download PDF
+      </a>
+      <a href="products.html" class="btn-outline-dark">
+        Browse Products →
+      </a>
+    </div>
+  </div>
+
+  <!-- PDF Viewer -->
+  <div class="pdf-wrapper">
+    <object class="pdf-embed" data="Onam-Agarbathi-Catalog-2026.pdf" type="application/pdf">
+      <div class="pdf-fallback" style="display:block; padding:60px 2rem; text-align:center; background:var(--cream);">
+        <p style="font-size:1.1rem; color:var(--text-medium); margin-bottom:20px;">
+          Your browser cannot display the PDF inline. Please download it to view.
+        </p>
+        <a href="Onam-Agarbathi-Catalog-2026.pdf" download="Onam-Agarbathi-Catalog-2026.pdf" class="btn-download" style="display:inline-flex;">
+          ⬇ Download Catalog PDF
+        </a>
+      </div>
+    </object>
+  </div>
+
+  <!-- Category overview -->
+  <div class="catalog-highlights" style="margin-top:56px;">
+    <h2>Collections in This Catalog</h2>
+    <div class="catalog-categories">
+      <a href="products.html?filter=flagship" class="cat-item">
+        <span class="cat-icon">💎</span>
+        <div>
+          <div class="cat-name">Flagship &amp; Premium Masala</div>
+          <div class="cat-count">Black Gem · Vaishak · Onam Classic · Suprasandal</div>
+        </div>
+      </a>
+      <a href="products.html?filter=devotional" class="cat-item">
+        <span class="cat-icon">🪔</span>
+        <div>
+          <div class="cat-name">Hindu Devotional Series</div>
+          <div class="cat-count">Ganga Mata · Krishna · Lakshmi · Saraswathi · Shiva &amp; more</div>
+        </div>
+      </a>
+      <a href="products.html?filter=aromatherapy" class="cat-item">
+        <span class="cat-icon">🌿</span>
+        <div>
+          <div class="cat-name">Aromatherapy Range</div>
+          <div class="cat-count">Lavender Premium · Exclusive Fragrance (Citronella)</div>
+        </div>
+      </a>
+      <a href="products.html?filter=multifaith" class="cat-item">
+        <span class="cat-icon">✝️</span>
+        <div>
+          <div class="cat-name">Multi-Faith Series</div>
+          <div class="cat-count">St. Antony · St. Joseph · Lord Jesus · St. Jude · St. Michael</div>
+        </div>
+      </a>
+      <a href="products.html?filter=resin" class="cat-item">
+        <span class="cat-icon">🌳</span>
+        <div>
+          <div class="cat-name">Sacred Resin &amp; Exotic</div>
+          <div class="cat-count">Loban · Money Drawing</div>
+        </div>
+      </a>
+      <a href="products.html?filter=jubilee" class="cat-item">
+        <span class="cat-icon">🥇</span>
+        <div>
+          <div class="cat-name">Golden Jubilee Collection</div>
+          <div class="cat-count">Ardhanarishwara · Vishnu · Exclusive Fragrance</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Onam Agarbathi Pvt. Ltd.</div>
+      <div class="footer-brand-tagline">Fragrance · Devotion · Heritage · Since 1922</div>
+      <p class="footer-desc">
+        Continuing the fragrance legacy of National Flag Perfumery Works, founded 1922. Over a century of devotion, craftsmanship, and aromatic excellence — from our family to yours.
+      </p>
+      <div class="footer-contact-item">📞 <a href="tel:+919845563633">+91 98455 63633</a></div>
+      <div class="footer-contact-item">📞 <a href="tel:+919844725484">+91 98447 25484</a></div>
+      <div class="footer-contact-item">✉️ <a href="mailto:onamagarbathi@gmail.com">onamagarbathi@gmail.com</a></div>
+      <div class="footer-contact-item">📍 Bangalore, Karnataka, India</div>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Product Catalog</a></li>
+        <li><a href="catalog.html">Trade Catalog PDF</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Collections</div>
+      <ul class="footer-links">
+        <li><a href="products.html?filter=flagship">Flagship &amp; Premium</a></li>
+        <li><a href="products.html?filter=devotional">Hindu Devotional</a></li>
+        <li><a href="products.html?filter=aromatherapy">Aromatherapy</a></li>
+        <li><a href="products.html?filter=multifaith">Multi-Faith</a></li>
+        <li><a href="products.html?filter=resin">Sacred Resin &amp; Exotic</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Trade Enquiries</div>
+      <p style="font-size: 0.88rem; color: rgba(251,245,230,0.6); line-height: 1.7; margin-bottom: 1rem;">
+        For wholesale, export, CSD/Defence, and government supply enquiries, reach out directly.
+      </p>
+      <a href="contact.html" class="btn-primary" style="font-size: 0.85rem; padding: 11px 24px;">Get in Touch</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Onam Agarbathi Pvt. Ltd. All rights reserved.</p>
+    <p>General Trade Catalog — Confidential</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
